@@ -4,6 +4,7 @@ import { dataPokemones } from '../Api/api';
 
 const Cuerpo = () => {
     const [pokemon, setPokemon] = useState([]);
+    
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,7 +19,7 @@ const Cuerpo = () => {
             <ul className='listItem'>
                 {pokemon.map((pokemon) => (
                 <li key={pokemon.name}>{pokemon.name}</li>
-                
+
                 ))}
             </ul>
         </div>
