@@ -33,7 +33,7 @@ const Cuerpo = () => {
         {pokemon.map((poke) => (
           <li key={poke.id} className="bg-yellow-200 p-4 rounded-lg shadow-md hover:bg-yellow-300">
             <img src={poke.sprites.front_default} alt={poke.name} className="pokemon-image" />
-            <h2 className="pokemon-name">{poke.name}</h2>
+            <h2 className="pokemon-name">{poke.name.toUpperCase()}</h2>
             <p className="pokemon-type">Tipo: {poke.types[0].type.name}</p>
             <Link to={`/pokemon/${poke.id}`} className='link'>{poke.name}</Link>
           </li>
